@@ -5,7 +5,6 @@ import com.zzzsleep.project.annotation.AuthCheck;
 import com.zzzsleep.project.common.ErrorCode;
 import com.zzzsleep.project.exception.BusinessException;
 import com.zzzsleep.project.model.entity.User;
-import com.zzzsleep.project.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

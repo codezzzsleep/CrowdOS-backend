@@ -45,7 +45,7 @@ public class Task implements Serializable {
     /**
      * 任务描述
      */
-    private String describe_task;
+    private String taskDescribe;
     /**
      * 任务执行总人数
      */

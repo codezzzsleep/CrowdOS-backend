@@ -11,14 +11,11 @@ import com.zzzsleep.project.common.ResultUtils;
 import com.zzzsleep.project.constant.CommonConstant;
 import com.zzzsleep.project.exception.BusinessException;
 import com.zzzsleep.project.model.dto.post.PostAddRequest;
-import com.zzzsleep.project.model.dto.post.PostDoThumbRequest;
 import com.zzzsleep.project.model.dto.post.PostQueryRequest;
 import com.zzzsleep.project.model.dto.post.PostUpdateRequest;
 import com.zzzsleep.project.model.entity.Post;
 import com.zzzsleep.project.model.entity.User;
-import com.zzzsleep.project.model.vo.PostVO;
 import com.zzzsleep.project.service.PostService;
-import com.zzzsleep.project.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -26,11 +23,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.*;
-import java.util.stream.Collectors;
 
 /**
  * 帖子接口
