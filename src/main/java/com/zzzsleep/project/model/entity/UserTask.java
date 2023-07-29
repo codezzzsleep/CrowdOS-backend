@@ -7,50 +7,34 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 用户
- *
- * @TableName user
- */
-@TableName(value = "user")
+@TableName("user_task")
 @Data
-public class User implements Serializable {
+public class UserTask implements Serializable {
     /**
-     * id
+     * 用户-任务id
      */
     @TableId(type = IdType.AUTO)
-    private Long userId;
-
+    private Integer userTaskId;
     /**
-     * 用户昵称
+     * 用户id
      */
-    private String userName;
-
+    private Integer userId;
     /**
-     * 账号
+     * 任务id
      */
-    private String userAccount;
-
+    private Integer taskId;
     /**
-     * 用户头像
+     * 任务执行状态：0接受未执行，1接受并执行
      */
-    private String userAvatar;
-
-
+    private Integer userTaskStatus;
     /**
-     * 用户角色: user, admin
+     * 任务内容
      */
-    private String userRole;
-
+    private String content;
     /**
-     * 密码
+     * 任务类型
      */
-    private String userPassword;
-
-    /**
-     * 用户积分
-     */
-    private Integer points;
+    private Integer type;
     /**
      * 创建时间
      */
@@ -71,4 +55,5 @@ public class User implements Serializable {
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
+
 }
