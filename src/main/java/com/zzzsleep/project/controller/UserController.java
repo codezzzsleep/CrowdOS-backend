@@ -12,6 +12,7 @@ import com.zzzsleep.project.exception.BusinessException;
 import com.zzzsleep.project.model.dto.user.*;
 import com.zzzsleep.project.model.entity.User;
 import com.zzzsleep.project.model.vo.UserVO;
+import com.zzzsleep.project.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
@@ -53,6 +54,7 @@ public class UserController {
             return null;
         }
         long result = userService.userRegister(userAccount, userPassword, checkPassword);
+        
         return ResultUtils.success(result);
     }
 

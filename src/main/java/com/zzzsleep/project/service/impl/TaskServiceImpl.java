@@ -1,7 +1,8 @@
 package com.zzzsleep.project.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import generator.domain.Task;
+
+import com.zzzsleep.project.model.entity.Task;
 import com.zzzsleep.project.service.TaskService;
 import com.zzzsleep.project.mapper.TaskMapper;
 import org.springframework.stereotype.Service;
