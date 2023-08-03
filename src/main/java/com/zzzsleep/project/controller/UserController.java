@@ -13,6 +13,7 @@ import com.zzzsleep.project.model.dto.user.*;
 import com.zzzsleep.project.model.entity.User;
 import com.zzzsleep.project.model.vo.UserVO;
 import com.zzzsleep.project.service.UserService;
+import com.zzzsleep.project.service.impl.UserServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,7 @@ import java.util.stream.Collectors;
 public class UserController {
 
     @Resource
-    private UserService userService;
+    private UserServiceImpl userService;
 
     // region 登录相关
 
@@ -54,7 +55,7 @@ public class UserController {
             return null;
         }
         long result = userService.userRegister(userAccount, userPassword, checkPassword);
-        
+
         return ResultUtils.success(result);
     }
 
@@ -130,7 +131,7 @@ public class UserController {
         if (!result) {
             throw new BusinessException(ErrorCode.OPERATION_ERROR);
         }
-        return ResultUtils.success(user.getId());
+        return ResultUtils.success(user.getUserId());
     }
 
     /**

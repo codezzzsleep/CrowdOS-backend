@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="generator.mapper.UserTaskMapper">
+<mapper namespace="com.zzzsleep.project.mapper.UserTaskMapper">
 
-    <resultMap id="BaseResultMap" type="generator.domain.UserTask">
+    <resultMap id="BaseResultMap" type="com.zzzsleep.project.model.entity.UserTask">
             <id property="userTaskId" column="userTaskId" jdbcType="INTEGER"/>
             <result property="userId" column="userId" jdbcType="INTEGER"/>
             <result property="taskId" column="taskId" jdbcType="INTEGER"/>

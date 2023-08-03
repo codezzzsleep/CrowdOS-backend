@@ -5,6 +5,8 @@ import com.zzzsleep.project.annotation.AuthCheck;
 import com.zzzsleep.project.common.ErrorCode;
 import com.zzzsleep.project.exception.BusinessException;
 import com.zzzsleep.project.model.entity.User;
+import com.zzzsleep.project.service.UserService;
+import com.zzzsleep.project.service.impl.UserServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -31,7 +33,7 @@ import java.util.stream.Collectors;
 public class AuthInterceptor {
 
     @Resource
-    private UserService userService;
+    private UserServiceImpl userService;
 
     /**
      * 执行拦截
